@@ -6,6 +6,7 @@ sap.ui.define([
 
 ], function (Controller, History, Dialog, formatter) {
     "use strict";
+    
 
     return Controller.extend("smarttable.amarttable1.controller.Details", {
         formatter: formatter,
