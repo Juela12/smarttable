@@ -11,6 +11,7 @@ sap.ui.define([
      */
     function (Controller, Fragment, Filter, FilterOperator) {
         "use strict";
+        
 
         return Controller.extend("smarttable.amarttable1.controller.App", {
             onInit: function () {
