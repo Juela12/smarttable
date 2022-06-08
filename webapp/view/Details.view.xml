@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName="smarttable.amarttable1.controller.Details"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+<App id="app">
+                <Page id="page" title="{i18n>title}"
+                 showNavButton="true"
+		        navButtonPress="onNavBack">
+                     <content>
+                     	<Button text="Take Photo" press="takePhoto" />
+                         <Button text="Send to SAP" press="sendToSAP" />
+                         <VBox id="wow"></VBox>
+                    
+                        	<VBox
+							alignItems="Center">
+							<Image
+                                src="{path: 'Photo>/Content', formatter:'.formatter.imageFormatter' }"
+								width="300px"
+                                height="300px"
+                                visible= "true" >
+							</Image>
+							<Text text="Photo" class="sapUiSmallMarginTop"/>
+						</VBox>
+                     </content>
+                </Page>
+</App>
+</mvc:View>

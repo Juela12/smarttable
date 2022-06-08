@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogEkgrp"
+		title="Surname"
+		items="{Surname>/}"
+		search=".onValueHelpSearchSurname"
+		confirm=".onValueHelpCloseSurname"
+		cancel=".onValueHelpCloseSurname">
+		<items>
+		<StandardListItem
+			title="{Surname>Surname}" />
+			 
+			</items>
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,120 @@
+<mvc:View
+    controllerName="smarttable.amarttable1.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:l="sap.ui.layout" 
+	xmlns:core="sap.ui.core"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable">
+	<Shell id="shell">
+	 <App id="app">
+	<pages>
+	<Page>
+   
+                     <l:VerticalLayout width="100%">
+		<Label text="FilterBar"/>
+		<fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
+			<fb:filterGroupItems>
+				 <fb:FilterGroupItem 
+             groupName="__$INTERNAL$"
+             name="A" 
+             label="Name" 
+             labelTooltip="Tooltip Example" 
+             mandatory="true"
+             partOfCurrentVariant="true" 
+             visibleInFilterBar="true">
+					<fb:control>
+           <Input 
+			id="productInput"
+			placeholder="Name"
+			showSuggestion="true"
+			showValueHelp="true"
+			valueHelpRequest="onValueHelpRequestName" >
+		   </Input>
+				   </fb:control>
+			</fb:FilterGroupItem>
+
+<fb:FilterGroupItem 
+             groupName="__$INTERNAL$"
+             name="B" 
+             label="Surname" 
+             labelTooltip="Tooltip Example" 
+             mandatory="true"
+             partOfCurrentVariant="true" 
+             visibleInFilterBar="true">
+					<fb:control>
+           <Input 
+			id="productInput1"
+			placeholder="Surname"
+			showSuggestion="true"
+			showValueHelp="true"
+			valueHelpRequest="onValueHelpRequestSurname" >
+		   </Input>
+				   </fb:control>
+			</fb:FilterGroupItem>
+
+
+
+<fb:FilterGroupItem 
+             groupName="__$INTERNAL$"
+             name="C" 
+             label="Branch" 
+             labelTooltip="Tooltip Example" 
+             mandatory="true"
+             partOfCurrentVariant="true" 
+             visibleInFilterBar="true">
+					<fb:control>
+           <Input 
+			id="productInput2"
+			placeholder="Branch"
+			showSuggestion="true"
+			showValueHelp="true"
+			valueHelpRequest="onValueHelpRequestBranch" >
+		   </Input>
+				   </fb:control>
+			</fb:FilterGroupItem>
+			</fb:filterGroupItems>
+	    </fb:FilterBar>
+	</l:VerticalLayout>
+
+
+
+
+    	<smartTable:SmartTable 
+        		id="smartTable"
+        		smartFilterId="smartFilterBar" 
+        		tableType="ResponsiveTable" 
+        		editable="false"
+        		entitySet="ptypeSet" 
+        		useVariantManagement="true"
+        		useTablePersonalisation="true" 
+        		header="Products" 
+        		showRowCount="true"
+        		useExportToExcel="false" 
+        		enableAutoBinding="true"
+        		persistencyKey="SmartTablePKey"
+                initiallyVisibleFields="UserId,Name,Surname,Branch">
+				<Table id="idTable" itemPress=".onPress"  mode="SingleSelect">
+				<ColumnListItem type="Navigation" />
+				  </Table>
+        	</smartTable:SmartTable>
+
+				<footer>
+				
+                <OverflowToolbar >
+				<ToolbarSpacer />
+                    <Button  text="Delete" press="onDelete" />
+                </OverflowToolbar>
+					</footer>
+			</Page>
+			</pages>
+          </App>
+		  </Shell>
+
+
+
+
+               
+          
+</mvc:View>
